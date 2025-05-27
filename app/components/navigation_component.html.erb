@@ -1,0 +1,17 @@
+<nav slot="navigation">
+  <ul>
+    <% links.each do |link| %>
+      <li>
+        <%= link_to link[:text], link[:path], 
+            class: "nav-link #{'active' if current_page?(link[:path])}" %>
+      </li>
+    <% end %>
+  </ul>
+</nav>
+
+<style>
+  [slot*='navigation'] a {
+    --wa-color-text-link: var(--wa-color-text-normal);
+  }
+</style>
+

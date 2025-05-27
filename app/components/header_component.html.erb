@@ -1,0 +1,29 @@
+<header slot="header" class="wa-split">
+  <div class="wa-cluster">
+    <%= link_to root_path, class: "nav-link" do %>
+      <wa-icon family="classic" name="gamepad" style="color: var(--wa-color-brand-fill-loud); font-size: 1.5em;"></wa-icon>
+    <% end %>
+    <span id="brand-name" class="wa-heading-s wa-desktop-only">Likable Games</span>
+    <a href="#">Ride the Bus</a>
+    <a href="#">Super Bowl Squares</a>
+    <a href="#">Worlde</a>
+    <a href="#">About</a>
+  </div>
+  <div class="wa-cluster wa-gap-xs">
+    <%= link_to "Log out", session_path, method: :delete if helpers.authenticated? %>
+    <%= link_to "Login", new_session_path unless helpers.authenticated? %>
+    <% if false %>
+      <wa-button size="small" variant="brand">Login</wa-button>
+    <% end %>
+  </div>
+</header>
+
+<style>
+  [slot='header'] {
+    --wa-link-decoration-default: none;
+    border-block-end: var(--wa-border-width-s) var(--wa-border-style) var(--wa-color-surface-border);
+  }
+  [slot*='header'] a {
+    font-weight: var(--wa-font-weight-action);
+  }
+</style>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Likablegames" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <%# Include stylesheets from web awesome %>
+    <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.13/dist/styles/themes/glossy.css" />
+    <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.13/dist/styles/webawesome.css" />
+    <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.13/dist/webawesome.loader.js"></script>
+  </head>
+
+  <body>
+    <wa-page mobile-breakpoint="920">
+
+      <%= render(HeaderComponent.new) %>
+
+      <%# Placeholder - this needs to change based on game %>
+      <% if false %>
+        <%= render NavigationComponent.new(links: [
+          { text: "Home", path: root_path },
+          { text: "About", path: about_path },
+          { text: "Wordle", path: "#" },
+          { text: "Ride the Bus", path: "#" },
+          { text: "Superbowl Squares", path: "#" }
+        ]) %>
+      <% end %>
+
+      <main class="wa-body-l">
+        <%= yield %>
+      </main>
+
+      <%= render(FooterComponent.new) %>
+    </wa-page>
+
+    <style>
+      wa-page {
+        --menu-width: 15rem;
+        --aside-width: 15rem;
+      }
+      wa-page[view='desktop'] {
+        [slot*='navigation'] {
+          border-inline-end: var(--wa-border-width-s) var(--wa-border-style) var(--wa-color-surface-border);
+        }
+      }
+      wa-page[view='mobile'] {
+        --menu-width: auto;
+        --aside-width: auto;
+      }
+    </style>
+
+    <script>
+      const sectionAnchors = document.querySelectorAll("[slot*='navigation'] a[href*='#']");
+      sectionAnchors.forEach((sectionAnchor) => sectionAnchor.setAttribute("data-drawer", "close"));
+    </script>
+
+  </body>
+</html>
