@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profiles
   resource :session
   resources :passwords, param: :token
   root "pages#home"
