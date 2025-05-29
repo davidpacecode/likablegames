@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
   root "pages#home"
   get "ride-the-bus", to: "pages#ride_the_bus_home"
+  get "wordle", to: "pages#wordle_home"
   get "about", to: "pages#about"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
