@@ -1,34 +1,34 @@
-<h1>Ride the Bus!</h1>
+<center><h1>Ride the Bus!</h1></center>
 
-<p>Let's play some ride the bus. For right now, I'm gonna just tinker with the UI...</p>
+<center><p>Let's play some ride the bus. For right now, I'm gonna just tinker with the UI...</p></center>
 
 <div class="wa-stack wa-gap-0" style="background-color: #008000;">
-  <div class="wa-span-grid">
-    <wa-card></wa-card>
+  <div class="wa-span-grid ">
+    <div><center><%= image_tag "red.svg", size: "50" %></center></div>
   </div>
-  <div class="wa-span-grid">
-    <wa-card></wa-card>
-  </div>
-  <div class="wa-grid wa-gap-0" style="--min-column-size: 200px;">
-    <wa-card>Round 1</wa-card>
-    <wa-card>Round 2</wa-card>
-    <wa-card>Round 3</wa-card>
-    <wa-card>Round 4</wa-card>
+  <div class="wa-span-grid wa-heading-xl">
+    <div><center>RIDE THE BUS</center></div>
   </div>
   <div class="wa-grid wa-gap-0" style="--min-column-size: 200px;">
-    <wa-card><wa-icon name="heart"></wa-icon></wa-card>
-    <wa-card><wa-icon name="diamond"></wa-icon></wa-card>
-    <wa-card></wa-card>
-    <wa-card></wa-card>
+    <div class="wa-body-l"><center>Round 1 <%= tag.br %> Red or Black <%= tag.br %> 2x</center></div>
+    <div class="wa-body-l"><center>Round 2 <%= tag.br %> Higher or Lower <%= tag.br %> 3x</center></div>
+    <div class="wa-body-l"><center>Round 3 <%= tag.br %> Inside or Outside <%= tag.br %> 4x</center></div>
+    <div class="wa-body-l"><center>Round 4 <%= tag.br %> Suit <%= tag.br %> 20x</center></div>
+  </div>
+  <div class="wa-grid wa-gap-0" style="--min-column-size: 200px;">
+    <div><center><%= image_tag "diamonds_3.svg", size: "50" %></center></div>
+    <div><center><%= image_tag "hearts_queen.svg", size: "50" %></center></div>
+    <div><center><%= image_tag "spades_ace.svg", size: "50" %></center></div>
+    <div><center><%= image_tag "clubs_8.svg", size: "50" %></center></div>
   </div>
   <div class="wa-grid wa-gap-0" style="--min-column-size: 50px;">
-    <wa-card></wa-card>
-    <wa-card></wa-card>
-    <wa-card></wa-card>
-    <wa-card></wa-card>
-    <wa-card></wa-card>
-    <wa-card></wa-card>
-    <wa-card></wa-card>
+    <div><center>Player 1 <%= tag.br %>Bet: $10</center></div>
+    <div><center>Player 2 <%= tag.br %>Bet: $10</center></div>
+    <div><center>Player 3 <%= tag.br %>Bet: $10</center></div>
+    <div><center>Player 4 <%= tag.br %>Bet: $10</center></div>
+    <div><center>Player 5 <%= tag.br %>Bet: $10</center></div>
+    <div><center>Player 6 <%= tag.br %>Bet: $10</center></div>
+    <div><center>Player 7 <%= tag.br %>Bet: $10</center></div>
   </div>
 </div>
 
