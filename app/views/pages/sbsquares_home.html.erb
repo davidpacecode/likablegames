@@ -4,16 +4,22 @@
 
 <div class="wa-stack wa-gap-xs">
   <p class="wa-heading-3xl" style="text-align: center;">PATRIOTS</p>
-  <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
-    <% 10.times do %>
-      <wa-icon name="x" style="width: 6ch;"></wa-icon>
-    <% end %>
-  </div>
-  <% 10.times do %>
+
     <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
-      <% 10.times do %>
-        <wa-input style="width: 7ch; height: 7ch;"></wa-input>
-      <% end %>
+      <div style="width: 7ch;"></div>
+        <% 10.times do %>
+          <div style="width: 7ch; display: flex; justify-content: center;">
+            <wa-icon name="x"></wa-icon>
+          </div>
+        <% end %>
     </div>
-  <% end %>
+
+    <% 10.times do %>
+      <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
+        <wa-icon name="y" style="width: 7ch; display: flex; justify-content: center; align-items: center;"></wa-icon>
+        <% 10.times do %>
+          <wa-input style="width: 7ch; height: 7ch;"></wa-input>
+        <% end %>
+      </div>
+    <% end %>
 </div>
