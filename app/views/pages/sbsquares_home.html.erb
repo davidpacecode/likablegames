@@ -1,48 +1,19 @@
-<h1 style="text-align: center;">Let's play Worlde!</h1>
+<h1 style="text-align: center;">Super Bowl Squares!</h1>
 
 <p style="text-align: center;">For now, just playing with the UI...</p>
 
 <div class="wa-stack wa-gap-xs">
+  <p class="wa-heading-3xl" style="text-align: center;">PATRIOTS</p>
   <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
-    <wa-input style="width: 5ch;" autofocus="true" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
+    <% 10.times do %>
+      <wa-icon name="x" style="width: 6ch;"></wa-icon>
+    <% end %>
   </div>
-  <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
-    <wa-input style="width: 5ch;" autofocus="true" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-  </div>
-  <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
-    <wa-input style="width: 5ch;" autofocus="true" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-  </div>
-  <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
-    <wa-input style="width: 5ch;" autofocus="true" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-  </div>
-  <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
-    <wa-input style="width: 5ch;" autofocus="true" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-  </div>
-  <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
-    <wa-input style="width: 5ch;" autofocus="true" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-    <wa-input style="width: 5ch;" maxlength="1"></wa-input>
-  </div>
+  <% 10.times do %>
+    <div class="wa-cluster wa-gap-xs" style="justify-content: center;">
+      <% 10.times do %>
+        <wa-input style="width: 7ch; height: 7ch;"></wa-input>
+      <% end %>
+    </div>
+  <% end %>
 </div>
